@@ -38,7 +38,7 @@ public class A {
 		//	handler.addIndividuals("Team","Sri Lanka");
 			//	handler.addIndividuals("Team","India");
 			//handler.addObjectTypeProperty("India","playedAgainest","Sri Lanka");
-			handler.addDataTypeProperty("Sangakkara", "hasAverage", "54.5");
+			handler.addDataTypeProperty("Sangakkara", "hasScore", "100");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

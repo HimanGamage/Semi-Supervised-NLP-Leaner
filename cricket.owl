@@ -6,17 +6,17 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Class rdf:about="http://myonth.com/cricket/ontology#Bowler">
+    <rdfs:label>Bowler</rdfs:label>
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://myonth.com/cricket/ontology#Player"/>
     </rdfs:subClassOf>
-    <rdfs:label>Bowler</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="http://myonth.com/cricket/ontology#Player">
     <rdfs:label>Player</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="http://myonth.com/cricket/ontology#Batsman">
-    <rdfs:subClassOf rdf:resource="http://myonth.com/cricket/ontology#Player"/>
     <rdfs:label>Batsman</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://myonth.com/cricket/ontology#Player"/>
   </owl:Class>
   <owl:Class rdf:about="http://myonth.com/cricket/ontology#Umpire">
     <rdfs:label>Umpire</rdfs:label>
@@ -25,8 +25,8 @@
     <rdfs:label>Stadium</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="http://myonth.com/cricket/ontology#AllRounder">
-    <rdfs:subClassOf rdf:resource="http://myonth.com/cricket/ontology#Player"/>
     <rdfs:label>AllRounder</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://myonth.com/cricket/ontology#Player"/>
   </owl:Class>
   <owl:Class rdf:about="http://myonth.com/cricket/ontology#Team">
     <rdfs:label>Team</rdfs:label>
@@ -38,82 +38,83 @@
     <rdfs:label>Captain</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="http://myonth.com/cricket/ontology#WicketKeeper">
-    <rdfs:subClassOf rdf:resource="http://myonth.com/cricket/ontology#Player"/>
     <rdfs:label>WicketKeeper</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://myonth.com/cricket/ontology#Player"/>
   </owl:Class>
   <owl:ObjectProperty rdf:about="http://myonth.com/cricket/ontology#WonAgainst">
-    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Team"/>
-    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Team"/>
     <rdfs:label>Won Against</rdfs:label>
+    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Team"/>
+    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Team"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://myonth.com/cricket/ontology#captain">
-    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Player"/>
-    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Captain"/>
     <rdfs:label>Captain</rdfs:label>
+    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Captain"/>
+    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Player"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://myonth.com/cricket/ontology#dissmissed">
-    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Bowler"/>
-    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Batsman"/>
     <rdfs:label>Bowler dissmissed Batsman</rdfs:label>
+    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Batsman"/>
+    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Bowler"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://myonth.com/cricket/ontology#inTheMatchOf">
-    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Team"/>
-    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Match"/>
     <rdfs:label>In the match</rdfs:label>
+    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Match"/>
+    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Team"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://myonth.com/cricket/ontology#captainOf">
-    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Captain"/>
-    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Team"/>
     <rdfs:label>Captain of the team</rdfs:label>
+    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Team"/>
+    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Captain"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://myonth.com/cricket/ontology#playedAt">
-    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Match"/>
-    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Stadium"/>
     <rdfs:label>Match played at Stadium</rdfs:label>
+    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Stadium"/>
+    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Match"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://myonth.com/cricket/ontology#givenOut">
-    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Umpire"/>
-    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Batsman"/>
     <rdfs:label>Umpire givenOut</rdfs:label>
+    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Batsman"/>
+    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Umpire"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://myonth.com/cricket/ontology#playedAgainest">
-    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Team"/>
-    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Team"/>
     <rdfs:label>Played Against</rdfs:label>
+    <rdfs:range rdf:resource="http://myonth.com/cricket/ontology#Team"/>
+    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Team"/>
   </owl:ObjectProperty>
   <owl:DatatypeProperty rdf:about="http://myonth.com/cricket/ontology#hasAverage">
-    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Player"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:label>Player has the average</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Player"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://myonth.com/cricket/ontology#hasCenturies">
-    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Player"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:label>Player has the Centuries</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Player"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://myonth.com/cricket/ontology#hasWickets">
-    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Bowler"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:label>No of wickets of the bowler</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Bowler"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://myonth.com/cricket/ontology#hasScore">
-    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Player"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:label xml:lang="en">Player scores runs</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Player"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://myonth.com/cricket/ontology#hasSixes">
-    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Player"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:label>Player has sixes</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://myonth.com/cricket/ontology#Player"/>
   </owl:DatatypeProperty>
-  <j.0:WicketKeeper rdf:about="http://myonth.com/cricket/ontology#Sangakkara">
-    <j.0:hasAverage>54.5</j.0:hasAverage>
-    <rdf:type rdf:resource="http://myonth.com/cricket/ontology#Batsman"/>
+  <j.0:Captain rdf:about="http://myonth.com/cricket/ontology#Sangakkara">
+    <j.0:hasScore>100</j.0:hasScore>
     <j.0:captainOf>
       <j.0:Team rdf:about="http://myonth.com/cricket/ontology#Sri Lanka"/>
     </j.0:captainOf>
-    <rdf:type rdf:resource="http://myonth.com/cricket/ontology#Captain"/>
-  </j.0:WicketKeeper>
+    <rdf:type rdf:resource="http://myonth.com/cricket/ontology#Batsman"/>
+    <j.0:hasAverage>54.5</j.0:hasAverage>
+    <rdf:type rdf:resource="http://myonth.com/cricket/ontology#WicketKeeper"/>
+  </j.0:Captain>
   <j.0:Team rdf:about="http://myonth.com/cricket/ontology#India">
     <j.0:playedAgainest rdf:resource="http://myonth.com/cricket/ontology#Sri Lanka"/>
   </j.0:Team>
