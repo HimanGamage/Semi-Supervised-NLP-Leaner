@@ -8,7 +8,10 @@ import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
-
+/*
+ * Created by Himan Gamage
+ * 
+ */
 public class ExpandingController extends Thread {
 
 	@Override

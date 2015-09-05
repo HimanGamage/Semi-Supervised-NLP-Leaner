@@ -20,6 +20,11 @@ import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.vocabulary.XSD;
+/*
+ * Created by Himan Gamage
+ * 
+ */
+
 
 public class JenaHandler {
 	private static PrintStream out=null;
