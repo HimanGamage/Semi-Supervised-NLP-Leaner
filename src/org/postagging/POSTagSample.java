@@ -20,7 +20,7 @@ public class POSTagSample {
 	        PerformanceMonitor perfMon = new PerformanceMonitor(System.err, "sent");
 	        POSTaggerME tagger = new POSTaggerME(model);
 
-	        String input = "Mahela and Sangakkara walked with 369 matches";
+	        String input = "Who communicated with Sanggakkara?";
 	        ObjectStream<String> lineStream = new PlainTextByLineStream(
 	                new StringReader(input));
 

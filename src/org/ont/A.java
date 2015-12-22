@@ -35,13 +35,12 @@ public class A {
 		
 			
 		try {
-		
 		//	handler.createDataTypeProperty("hasScore", "Player", "Player scores runs",XSD.xstring);
-			//handler.addIndividuals("Batsman","Mahela");
+			//handler.addIndividuals("Batsman","Thisara");
 		//	handler.addIndividuals("Team","Sri Lanka");
-			//	handler.addIndividuals("Team","India");
+			//JenaHandler.getInstance().addIndividuals("Team","Pakisthan");
 			//handler.createObjectTypeProperty("communicated", "Batsman", "Batsman", "They play with together");
-		//	handler.addObjectTypeProperty("Mahela","consorted","Sangakkara");
+			handler.addObjectTypeProperty("Mahela","consorted","Dilshan");
 			//handler.addDataTypeProperty("Dilshan", "hasSixes", "70");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

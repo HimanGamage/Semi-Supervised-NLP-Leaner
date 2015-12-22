@@ -23,7 +23,7 @@ public class QueryingTest {
 
 	public static void main(String args[]){
 
-	QueryHandler.queryingOntology("captainOf");
+	//QueryHandler.queryingOntology("communicated");
 
 	
 	

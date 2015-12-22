@@ -29,7 +29,6 @@ import com.hp.hpl.jena.vocabulary.XSD;
  * 
  */
 public class JenaHandler {
-	private static PrintStream out=null;
 	private static JenaHandler instance = null;
 	private static OntModel ontModel = null;
 
@@ -57,13 +56,7 @@ public class JenaHandler {
 		return instance;
 	}
 
-	public static PrintStream getPrintStream() throws FileNotFoundException{
-		if(out==null){
-			out = new PrintStream(FILE_URL);
-		}
-		return out;
-		
-	}
+
 	public boolean isClassAvailable(String className) {
 		OntClass artefact = ontModel.getOntClass(NS + className);
 
@@ -151,9 +144,16 @@ public class JenaHandler {
 		Individual subj = ontModel.getIndividual(NS + subject);
 		Individual obj = ontModel.getIndividual(NS + object);
 		ObjectProperty pred = ontModel.getObjectProperty(NS + predicate);
-		
-		ontModel.add(subj, pred, obj);
-		ontModel.write(getPrintStream(), ABBREVIATED_SYNTAX, null);
+	//	System.out.println("\t\t\tspo:"+subject+predicate+object);
+		if(subj!=null && obj!=null && pred!=null ){
+			ontModel.add(subj, pred, obj);
+			
+			System.out.println("\t\tAdded relationship :"+pred);
+			PrintStream p = new PrintStream(FILE_URL);
+			ontModel.write(p, ABBREVIATED_SYNTAX, null);
+			p.close();
+		}
+	
 
 	}
 	public void addDataTypeProperty(String subject, String predicate, String object) throws FileNotFoundException {
@@ -162,7 +162,9 @@ public class JenaHandler {
 		DatatypeProperty pred = ontModel.getDatatypeProperty(NS + predicate);
 		
 		ontModel.add(subj, pred, object);
-		ontModel.write(getPrintStream(), ABBREVIATED_SYNTAX, null);
+		PrintStream p = new PrintStream(FILE_URL);
+		ontModel.write(p, ABBREVIATED_SYNTAX, null);
+		p.close();
 
 	}
 
@@ -173,6 +175,7 @@ public class JenaHandler {
 
 		PrintStream p = new PrintStream(FILE_URL);
 		ontModel.write(p, ABBREVIATED_SYNTAX, null);
+		p.close();
 
 	}
 	

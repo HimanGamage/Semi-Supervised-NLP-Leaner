@@ -35,5 +35,7 @@
 	<classpathentry kind="lib" path="E:/My Projects/FYP/extjwnl-1.8.1/lib/postgresql-9.4-1201-jdbc41.jar"/>
 	<classpathentry kind="lib" path="E:/My Projects/FYP/extjwnl-1.8.1/lib/slf4j-api-1.7.12.jar"/>
 	<classpathentry kind="lib" path="E:/My Projects/FYP/extjwnl-1.8.1/lib/slf4j-log4j12-1.7.12.jar"/>
+	<classpathentry kind="lib" path="E:/My Projects/FYP/JenaTests/libs for FYP/mysql-connector-java-5.1.23-bin.jar"/>
+	<classpathentry kind="lib" path="E:/My Projects/FYP/JenaTests/libs for FYP/openqa.engine-v0.0.7-beta.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
